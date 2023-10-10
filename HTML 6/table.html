@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+<meta charset="UTF-8">
+	
+<title>HTML Practice 6 - Tables</title>
+
+<style type="text/css">
+div{
+   text-align: center;
+}
+
+.sched{
+   margin:auto;
+   width: 550px;
+   border: solid 2px #000;
+   padding: 3px;
+   border-spacing: 5px;
+   border-collapse: separate;
+}
+td{
+   border: solid 1px #000000;
+   padding: 3px;
+   border-spacing: 5px;
+   border-collapse: seperate;
+}
+th{
+   background-color: lightgray;
+   border: solid 1px #000;
+}
+caption{
+   color: #003300;
+   font-size: large;
+   font-weight: bolder;
+}
+.colgroup{
+   background-color: #cccccc;
+   width: 25%;
+}
+.days{
+   background-color: #99ff66 ;
+}
+</style>
+</head>
+<body>
+<div >
+   <table class="sched">
+      <caption>My Class Schedule</caption>
+      <colgroup>
+      <colgroup span="5">
+      <tr>
+         <th>Courses</th>
+      <td class="days">Monday</td>
+      <td class="days">Tuesday</td>
+      <td class="days">Wednesday</td>
+      <td class="days">Thrusday</td>
+      <td class="days">Friday</td>
+      </tr>
+      <tr>
+         <th>INFO 1120</th>
+         <td></td>
+         <td>9-11</td>
+         <td></td>
+         <td>9-11</td>
+         <td rowspan="2"></td>
+      </tr>
+      <tr>
+         <th>Math 1010</th>
+        <td colspan="4">12-1</td>
+        <!--Spammed from cell 2-->
+        <!--Spammed from cell 2-->
+        <!--Spammed from cell 2-->
+        <!--Spammed from cell 2-->
+        <!--Spammed from row 1-->
+      </tr>
+	<tr>
+      <th>INFO 2420</th>
+      <td colspan="5">Online Available 24/7</td>
+      <!--Spammed from cell 2-->
+      <!--Spammed from cell 2-->
+      <!--Spammed from cell 2-->
+      <!--Spammed from cell 2-->
+      <!--Spammed from cell 2-->
+   </tr>
+   </table>
+</div>
+
+
+
+</body>
+</html>
+
