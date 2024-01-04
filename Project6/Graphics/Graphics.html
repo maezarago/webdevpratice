@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Graphics</title>
+
+<style type="text/css">
+    #thumbs, #image {
+        width: 700px;
+        border: solid 1px 000;
+        text-align: center;
+        margin: 0 auto 0 auto;
+        color: #000;
+        background: #eee;
+        padding: 5px;
+    }
+
+    #thumbs{
+        margin-top: 10px;
+    }
+
+    #thumbs img{
+        border: solid 1px #000;
+        margin: 5px;
+    }
+
+    #images{
+        height: 400px;
+    }
+
+    .instruction{
+        font-style: italic;
+    }
+
+</style>
+
+<script type="text/javascript">
+    <!--Begin comment for older browsers//
+
+    var imagArray=new Array(
+        'Image1Lg.jpg',
+        'Image2Lg.jpg',
+        'Image3Lg.jpg',
+        'Image4Lg.jpg'
+    );
+    var titleArray = new Array(
+        'Brave Bald Eagle',
+        'Soaring Hawk',
+        'Buzzing Hummingbird',
+        'Wise Owl'
+    );
+    var imgPath ="Image/Fullsize/";
+    
+    function swapImage(imgID) {
+        var theImage = document.getElementById('theImage');
+        var textDiv = document.getElementById('bottomText');
+        
+        var newImg;
+        var textTitle;
+
+        newImg= imgarray[imgID];
+        theImage.src = imgpath + newImg;
+
+        textTitle=titleArray[imgID];
+
+        textDiv.innerHTML =textTitle;
+    }
+
+    fuction preloadImages() {
+        for(var i=0; i <imgArray.length; i++) {
+            var tmpImg = new Image;
+            tmpImg.src = imgPath + imgArray[i];
+        }        
+    }
+
+    //End comment for older browsers-->
+</script>
+
+</head>
+
+<body onload="preloadImages()">
+    <div>
+        <a href=""
+        onmouseover="document.getElementById('print').src='Images/print2.jpg';"
+        onmouseout="document.getElementById('print').src='Images/print1.jpg';"
+        >
+        <img src="Images/print2.jpg" alt="printpage" width="200" height="50" id="print">
+    </a>
+
+    <a href=""
+        onmouseover="document.getElementByID('logo').src='Images/BackyardBirdsLogo2.jpg';"
+        onmouseout="document.getElementById('logo').src='Images/BackyardBirdLogo.jpg';">
+        
+        <img src="Images/logo.jpg" alt="Logo" id="logo"> 
+    </a>
+    </div>
+
+<p>
+The content of the document goes here . . .
+</p>
+
+</body>
+</html>
